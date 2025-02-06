@@ -1,0 +1,176 @@
+{
+	"id": "174e3ae0-03d3-47ee-9f7f-98ff672f0ccb",
+	"name": "urban_booking_collection",
+	"timestamp": "2025-02-06T22:03:17.256Z",
+	"collection_id": "41828752-4098d211-1bee-4064-bb22-4f2eff66865a",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-02-06T22:03:15.436Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "f03c48cd-544d-4578-99b0-d2d202a52ec1",
+			"name": "Signup",
+			"url": "http://localhost:3000/signup",
+			"time": 146,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				146
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a1c6bfa9-b67c-4564-be11-7a4ab6ba172f",
+			"name": "Login",
+			"url": "http://localhost:3000/login",
+			"time": 131,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				131
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2b621817-e04f-4ca4-88cb-c5628349ca0a",
+			"name": "Get slots data",
+			"url": "http://localhost:3000/api/slots",
+			"time": 185,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				185
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "42a89702-ae50-479d-aa78-3fa665700701",
+			"name": "Get bookings for a user",
+			"url": "http://localhost:3000/review",
+			"time": 141,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				141
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8342cfb0-a136-4583-ba97-e4e80ac7e2c2",
+			"name": "Book slot",
+			"url": "http://localhost:3000/bookings",
+			"time": 131,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				131
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "571f4e67-3272-4d79-b6a3-1a2faa41c587",
+			"name": "Patch slot",
+			"url": "http://localhost:3000/bookings",
+			"time": 130,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				130
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "54ec43cb-5185-4654-93ea-860d34ba1bc1",
+			"name": "Add carpenter",
+			"url": "http://localhost:3000/carpenters",
+			"time": 175,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				175
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1039,
+	"collection": {
+		"requests": [
+			{
+				"id": "f03c48cd-544d-4578-99b0-d2d202a52ec1",
+				"method": "POST"
+			},
+			{
+				"id": "a1c6bfa9-b67c-4564-be11-7a4ab6ba172f",
+				"method": "POST"
+			},
+			{
+				"id": "2b621817-e04f-4ca4-88cb-c5628349ca0a",
+				"method": "GET"
+			},
+			{
+				"id": "42a89702-ae50-479d-aa78-3fa665700701",
+				"method": "GET"
+			},
+			{
+				"id": "8342cfb0-a136-4583-ba97-e4e80ac7e2c2",
+				"method": "POST"
+			},
+			{
+				"id": "571f4e67-3272-4d79-b6a3-1a2faa41c587",
+				"method": "PATCH"
+			},
+			{
+				"id": "54ec43cb-5185-4654-93ea-860d34ba1bc1",
+				"method": "POST"
+			}
+		]
+	}
+}
