@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "carpenters" ADD COLUMN     "experience" INTEGER NOT NULL DEFAULT 0,
+ADD COLUMN     "rating" DOUBLE PRECISION NOT NULL DEFAULT 0.0;
