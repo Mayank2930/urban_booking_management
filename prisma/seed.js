@@ -4,7 +4,6 @@ const prisma = new PrismaClient();
 async function main() {
   console.log("🚀 Seeding database...");
 
-  // ✅ Add Carpenters
   const carpenters = await prisma.carpenter.createMany({
     data: [
       { name: "James", experience: 5, rating: 4.7 },
@@ -14,9 +13,8 @@ async function main() {
     ],
   });
 
-  console.log("✅ Carpenters added:", carpenters);
+  console.log("Carpenters added:", carpenters);
 
-  // ✅ Add Slots for Each Carpenter (9 AM to 6 PM, 1-hour slots)
   const carpenterList = await prisma.carpenter.findMany();
 
   for (const carpenter of carpenterList) {
@@ -31,12 +29,12 @@ async function main() {
     }
   }
 
-  console.log("✅ Slots added for all carpenters.");
+  console.log("Slots added for all carpenters.");
 }
 
 main()
   .catch((error) => {
-    console.error("❌ Error seeding data:", error);
+    console.error("Error seeding data:", error);
     process.exit(1);
   })
   .finally(() => {

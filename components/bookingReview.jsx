@@ -17,12 +17,12 @@ const BookingReview = ({ booking }) => {
       const data = await res.json();
       if (res.ok) {
         setStatus(data.status);
-        alert(`✅ Booking ${newStatus} successfully!`);
+        alert(`Booking ${newStatus} successfully!`);
       } else {
-        alert(data.error || "❌ Update failed");
+        alert(data.error || "Update failed");
       }
     } catch (error) {
-      console.error("❌ Error updating booking:", error);
+      console.error("Error updating booking:", error);
       alert("Error updating booking");
     } finally {
       setLoading(false);

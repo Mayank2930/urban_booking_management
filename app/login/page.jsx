@@ -61,7 +61,6 @@ export default function LoginPage() {
 
       {error && <p className='text-red-500 mt-2'>{error}</p>}
 
-      {/* ✅ Add Sign-Up Link Below the Form */}
       <p className='text-sm text-center mt-4'>
         Don't have an account?{" "}
         <Link href='/signup' className='text-blue-500 hover:underline'>

@@ -64,7 +64,7 @@ export async function POST(request) {
       },
     });
 
-    console.log("✅ New Slot Created:", newSlot);
+    console.log("New Slot Created:", newSlot);
     return NextResponse.json(newSlot, { status: 201 });
   } catch (error) {
     console.error("Error creating slot:", error);

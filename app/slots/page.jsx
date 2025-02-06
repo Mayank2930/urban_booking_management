@@ -25,13 +25,13 @@ export default function SlotFormPage() {
 
       const data = await res.json();
       if (res.ok) {
-        setMessage("✅ Slot created successfully!");
+        setMessage("Slot created successfully!");
       } else {
-        setMessage(`❌ Error: ${data.error}`);
+        setMessage(`Error: ${data.error}`);
       }
     } catch (error) {
       console.error("Error:", error);
-      setMessage("❌ An unexpected error occurred.");
+      setMessage("An unexpected error occurred.");
     }
   };
 

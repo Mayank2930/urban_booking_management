@@ -4,7 +4,7 @@ import { prisma } from "../../../lib/prisma";
 export async function POST(request) {
   try {
     const body = await request.json();
-    console.log("📩 Request Body:", body);
+    console.log("Request Body:", body);
 
     const { name, experience, rating } = body;
 
@@ -23,11 +23,11 @@ export async function POST(request) {
       },
     });
 
-    console.log("✅ Carpenter Created:", newCarpenter);
+    console.log("Carpenter Created:", newCarpenter);
     return NextResponse.json(newCarpenter, { status: 201 }); 
 
   } catch (error) {
-    console.error("❌ Error:", error);
+    console.error("Error:", error);
     return NextResponse.json( 
       { error: "Failed to create carpenter", details: error.message },
       { status: 500 }
@@ -41,7 +41,7 @@ export async function GET() {
       const carpenters = await prisma.carpenter.findMany();
       return NextResponse.json(carpenters, { status: 200 });
     } catch (error) {
-      console.error("❌ Error fetching carpenters:", error);
+      console.error("Error fetching carpenters:", error);
       return NextResponse.json({ error: "Failed to fetch carpenters" }, { status: 500 });
     }
   }

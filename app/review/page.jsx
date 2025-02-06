@@ -21,7 +21,7 @@ export default function ReviewPage() {
       const data = await res.json();
       setBookings(data);
     } catch (error) {
-      console.error("❌ Error fetching bookings:", error);
+      console.error("Error fetching bookings:", error);
     } finally {
       setLoading(false);
     }
@@ -37,12 +37,12 @@ export default function ReviewPage() {
 
       if (res.ok) {
         fetchBookings();
-        alert(`✅ Booking ${status} successfully!`);
+        alert(`Booking ${status} successfully!`);
       } else {
-        alert("❌ Failed to update booking");
+        alert("Failed to update booking");
       }
     } catch (error) {
-      console.error("❌ Error updating booking:", error);
+      console.error("Error updating booking:", error);
       alert("An error occurred while updating the booking.");
     }
   };
@@ -95,7 +95,6 @@ export default function ReviewPage() {
         </ul>
       )}
 
-      {/* ✅ Button to Go Back to Bookings Page */}
       <div className='flex justify-center mt-6'>
         <button
           onClick={() => router.push("/bookings")}

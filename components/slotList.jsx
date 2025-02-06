@@ -13,7 +13,7 @@ const SlotList = () => {
       const data = await res.json();
       setSlots(data);
     } catch (error) {
-      console.error("❌ Error fetching slots:", error);
+      console.error("Error fetching slots:", error);
     } finally {
       setLoading(false);
     }
@@ -47,7 +47,7 @@ const SlotList = () => {
 
       const data = await res.json();
       if (res.ok) {
-        alert("✅ Booking created successfully!");
+        alert("Booking created successfully!");
         fetchSlots(); 
       } else {
         alert(`Booking failed: ${data.error}`);

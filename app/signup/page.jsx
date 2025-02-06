@@ -27,12 +27,12 @@ export default function SignupPage() {
       const data = await res.json();
       if (res.ok) {
         setSuccess("🎉 User registered successfully!");
-        setTimeout(() => router.push("/login"), 1500);  // ✅ Redirect to login after signup
+        setTimeout(() => router.push("/login"), 1500);  
       } else {
         setError(data.error || "Registration failed");
       }
     } catch (error) {
-      console.error("❌ Registration Error:", error);
+      console.error("Registration Error:", error);
       setError("An unexpected error occurred.");
     }
   };

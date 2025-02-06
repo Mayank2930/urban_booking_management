@@ -25,20 +25,20 @@ export default function AddCarpenterPage() {
 
       let data = {};
       try {
-        data = await res.json(); // ✅ Parse JSON if possible
+        data = await res.json(); 
       } catch (jsonError) {
-        console.warn("No JSON response received:", jsonError); // Handle empty responses
+        console.warn("No JSON response received:", jsonError); 
       }
 
       if (res.ok) {
-        setMessage("✅ Carpenter added successfully!");
+        setMessage("Carpenter added successfully!");
         setFormData({ name: "", experience: "", rating: "" });
       } else {
-        setMessage(`❌ Error: ${data.error || "Unknown error"}`);
+        setMessage(`Error: ${data.error || "Unknown error"}`);
       }
     } catch (error) {
       console.error("Error:", error);
-      setMessage("❌ An unexpected error occurred.");
+      setMessage("An unexpected error occurred.");
     }
   };
 

@@ -19,7 +19,6 @@ export default function BookingPage() {
 
   return (
     <main className='relative p-4 min-h-screen bg-black text-white'>
-      {/* ✅ Go to Review Page Button (Top Left) */}
       <button
         onClick={() => router.push("/review")}
         className='absolute top-4 left-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow-md transition duration-300'
@@ -27,7 +26,6 @@ export default function BookingPage() {
         Go to Review Page
       </button>
 
-      {/* ✅ Logout Button (Top Right) */}
       <button
         onClick={() => signOut({ callbackUrl: "/login" })}
         className='absolute top-4 right-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded shadow-md transition duration-300'

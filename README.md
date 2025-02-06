@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Urban Booking Management System
 
-## Getting Started
+This project is a web-based booking system designed to manage appointments with skilled carpenters. It supports user authentication, real-time slot availability, and booking management.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✅ Project Folder Structure
+
+I have inlcuded both a custom and a plain format of my postgreSQL database. I have done this using DBeaver and took backup of the database.
+
+```
+urban-booking-management/
+├── app/
+├── components/
+├── prisma/
+├── database/
+│   ├── urban_booking.backup   # PostgreSQL Dump File
+│   └── urban_booking.sql      # Plain SQL File
+├── .env
+├── README.md
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##  Database Setup Instructions
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+###  1. PostgreSQL Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+###  2. Database Restoration
 
-## Learn More
+#### **Option 1: Restore from `.dump` File**
 
-To learn more about Next.js, take a look at the following resources:
+1. **Create an empty database:**
+   ```bash
+   createdb urban_booking
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Restore the database:**
+   ```bash
+   pg_restore -U postgres -d urban_booking -v database/urban_booking.backup
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+#### **Option 2: Restore from `.sql` File**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Create an empty database:**
+   ```bash
+   createdb urban_booking
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Restore the SQL file:**
+   ```bash
+   psql -U postgres -d urban_booking -f database/urban_booking.sql
+   ```
+
+---
+
+### ✅ 3. Update the `.env` File
+
+After restoring the database, update the `.env` file with your PostgreSQL credentials:
+
+```bash
+DATABASE_URL=postgresql://<username>:<password>@localhost:5432/urban_booking
+```
+
+**Example:**
+```bash
+DATABASE_URL=postgresql://postgres:your_password@localhost:5432/urban_booking
+```
+
+---
+
+### ✅ 4. Apply Prisma Migrations
+
+```bash
+npx prisma migrate deploy
+```
+
+(Optional) To open Prisma Studio and verify data:
+```bash
+npx prisma studio
+```
+
+---
+
+## ⚡ Running the Application
+
+```bash
+npm install
+npm run dev
+```
+
+## ✅ Features
+
+- User Authentication (Login/Signup)
+- Real-time Slot Availability
+- Booking Management (Create, Confirm, Cancel)
+- PostgreSQL Database Integration
+
+---
+
+## 📞 Support
+
+If you encounter issues, feel free to reach out!
+https://github.com/Mayank2930/urban_booking_management -> github repository link
+I may deploy this project, so check out the repository for any updates!
+

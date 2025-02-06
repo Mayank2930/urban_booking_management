@@ -12,7 +12,7 @@ export default function HomePage() {
     if (session) {
       router.push("/bookings");
     } else {
-      router.push("/login"); // ✅ Redirect to login if not authenticated
+      router.push("/login"); 
     }
   };
 
